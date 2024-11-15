@@ -1,5 +1,9 @@
-<script setup></script>
-<template >
+<script setup>
+const { data: posts } = await useAsyncData("latest-posts", () =>
+  queryContent("/blog").sort({date:1}).limit(3).find()
+);
+</script>
+<template>
   <section>
     <h1 class="text-5xl font-bold mt-20">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, nam.
@@ -13,6 +17,9 @@
     </p>
   </section>
   <section>
-    <h2 class="text-3xl font-bold mt-8">Lates Blog Post</h2>
+    <h2 class="text-3xl font-bold mt-8">Latest Blog Post</h2>
+    <div class="grid mt-8 gap-10 md:grid-cols-3">
+      <Post :post="posts" />
+    </div>
   </section>
 </template>
