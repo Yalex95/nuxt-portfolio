@@ -1,15 +1,57 @@
-<script setup></script>
+<script setup>
+const query = gql`
+  {
+    viewer {
+      repositories(first: 6, orderBy: { field: CREATED_AT, direction: DESC }) {
+        totalCount
+        nodes {
+          id
+          name
+          createdAt
+          description
+          url
+          forks {
+            totalCount
+          }
+          watchers {
+            totalCount
+          }
+          stargazers {
+            totalCount
+          }
+        }
+      }
+    }
+  }
+`;
+const { data } = await useAsyncQuery(query);
+</script>
 <template>
-  <section>
-    <h1 class="text-5xl font-bold mt-20">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, nam.
-      Soluta nisi quae
-    </h1>
-    <p class="text-base text-gray-900 p-2">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-      voluptas alias qui porro! At, sequi vitae quae repudiandae nulla beatae
-      eaque tempore recusandae eligendi expedita atque placeat sapiente repellat
-      voluptate.
-    </p>
+  <h1 class="text-5xl font-bold mt-20">Projects</h1>
+  <p class="text-base p-2">Here are some of my projects</p>
+  <section class="grid grid-cols-2 gap-10">
+    <div
+      v-for="project in data.viewer.repositories.nodes"
+      class="p-8 border-4 my-4 rounded-lg hover:bg-gray-500"
+    >
+      <a :href="project.url" target="_blank">
+        <h2 class="text-2xl text-indigo-800 font-semibold mb-2 hover:underline">
+          {{ project.name }}
+        </h2>
+      </a>
+      <p>{{ project.description }}</p>
+      <div class="mt-4">
+        <Icon name="fontisto:star" size="1.1rem" class="text-indigo-700" />
+        Stars: {{ project.stargazers.totalCount }}
+        <Icon
+          name="system-uicons:branch"
+          size="1.1rem"
+          class="text-indigo-800"
+        />
+        Forks: {{ project.forks.totalCount }}
+        <Icon name="system-uicons:eye" size="1.1rem" class="text-indigo-700" />
+        Watchers: {{ project.watchers.totalCount }}
+      </div>
+    </div>
   </section>
 </template>

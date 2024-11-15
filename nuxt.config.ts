@@ -5,19 +5,22 @@ export default defineNuxtConfig({
   // },
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/content"],
-  content:{
-    highlight:{
-      theme: 'nord',
-      preload:[
-        'ts',
-        'js',
-        'html',
-        'css',
-        'json',
-        'vue',
-        'bash'
-      ]
-    }
-  }
+  modules: ["@nuxt/ui", "@nuxt/content", "@nuxtjs/apollo"],
+  runtimeConfig: {
+    githubToken: process.env.GITHUB_TOKEN,
+  },
+  apollo: {
+    clients: {
+      default: {
+        tokenName: "github-token",
+        httpEndpoint: "https://api.github.com/graphql",
+      },
+    },
+  },
+  content: {
+    highlight: {
+      theme: "nord",
+      preload: ["ts", "js", "html", "css", "json", "vue", "bash"],
+    },
+  },
 });
