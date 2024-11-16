@@ -28,28 +28,30 @@
 </script>
 <style>
 #hero {
-  height: 600px;
-  background: rgb(52, 21, 93);
+  background: rgb(141, 33, 147);
   background: -moz-linear-gradient(
     0deg,
-    rgba(52, 21, 93, 1) 0%,
-    rgba(30, 4, 64, 1) 100%
+    rgba(141, 33, 147, 1) 0%,
+    rgba(115, 43, 119, 1) 12%,
+    rgba(0, 0, 0, 1) 53%
   );
   background: -webkit-linear-gradient(
     0deg,
-    rgba(52, 21, 93, 1) 0%,
-    rgba(30, 4, 64, 1) 100%
+    rgba(141, 33, 147, 1) 0%,
+    rgba(115, 43, 119, 1) 12%,
+    rgba(0, 0, 0, 1) 53%
   );
   background: linear-gradient(
     0deg,
-    rgba(52, 21, 93, 1) 0%,
-    rgba(30, 4, 64, 1) 100%
+    rgba(141, 33, 147, 1) 0%,
+    rgba(115, 43, 119, 1) 12%,
+    rgba(0, 0, 0, 1) 53%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#34155d",endColorstr="#1e0440",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8d2193",endColorstr="#000000",GradientType=1);
 }
 #hero span {
   display: none;
-}/*
+} /*
 #hero::before {
   content: "";
   position: absolute;
@@ -84,6 +86,7 @@
 
   font-family: "Zeyada";
 }*/
+/*
 #hero h1 {
   font-family: "Sansation";
   font-size: 40px;
@@ -97,36 +100,36 @@
 #hero .btn {
   display: inline-flex;
 }
-
+*/
 /* mobile */
-@media (max-width: 600px){
-  #hero::after{
+/*
+@media (max-width: 600px) {
+  #hero::after {
     height: 100px;
   }
-}
+}*/
 /* ipad */
+/*
 @media (max-width: 900px) and (min-width: 600px) {
-  #hero::after{
+  #hero::after {
     height: 150px;
   }
-  
 }
-@media(min-width: 990px) {
-  #hero::after{
-    height:250px;
+@media (min-width: 990px) {
+  #hero::after {
+    height: 250px;
     background-size: cover;
-  bottom: 5%;
-  }/*
+    bottom: 5%;
+  } 
   #hero::before{
     background-image: url(/assets/Hero-Pattern-desktop.svg);
     height: 600px;
     background-size: cover;
-  }*/
-  #hero{
+  }
+  #hero {
     min-height: 600px;
     height: 800px;
     padding-bottom: 3rem;
   }
-  
-}
+}*/
 </style>

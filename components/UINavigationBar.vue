@@ -160,7 +160,7 @@ onUnmounted(() => {
 }
 
 .scrolled {
-  background-color: #190039;
+  background-color: var(--color-purple-dark);
   position: fixed;
   z-index: 3;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example box shadow */

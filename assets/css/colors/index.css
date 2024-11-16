@@ -1,31 +1,38 @@
-:root{
+:root {
   --color-white: #fff;
-  --color-black: #000;  
-  --color-purple-light-50:#BAA7BB;
-  --color-purple-light-100:#B090B2;
-  --color-purple-light-200:#AA78AD;
-  --color-purple-light-300:#AA5CAE;
-  --color-purple-light-400:#AB41B1;
-  --color-purple-50:#AD28B4;
-  --color-purple-100:#B20DBB;
-  --color-purple-200:#8D2193;
-  --color-purple-300:#732B77;
-  --color-purple-400:#5F3062;
-  --color-purple-500:#503152;
-  --color-purple-600:#453046;
-  --color-purple-dark:#3B2E3C;
-  --color-green-light-50: #A6BBB3;
-  --color-green-light-100: #8FB1A5;
-  --color-green-light-200: #77AD99;
-  --color-green-light-300: #5BAE90;
-  --color-green-light-400: #41B088;
-  --color-green-50: #28B381;
-  --color-green-100: #0DBA7C;
-  --color-green-200: #21926A;
-  --color-green-300: #2B765B;
-  --color-green-400: #30614F;
+  --color-black: #000;
+  --color-purple-light-50: #baa7bb;
+  --color-purple-light-100: #b090b2;
+  --color-purple-light-200: #aa78ad;
+  --color-purple-light-300: #aa5cae;
+  --color-purple-light-400: #ab41b1;
+  --color-purple-50: #ad28b4;
+  --color-purple-100: #b20dbb;
+  --color-purple-200: #8d2193;
+  --color-purple-300: #732b77;
+  --color-purple-400: #5f3062;
+  --color-purple-500: #503152;
+  --color-purple-600: #453046;
+  --color-purple-dark: #3b2e3c;
+  --color-green-light-50: #a6bbb3;
+  --color-green-light-100: #8fb1a5;
+  --color-green-light-200: #77ad99;
+  --color-green-light-300: #5bae90;
+  --color-green-light-400: #41b088;
+  --color-green-50: #28b381;
+  --color-green-100: #0dba7c;
+  --color-green-200: #21926a;
+  --color-green-300: #2b765b;
+  --color-green-400: #30614f;
   --color-green-500: #315146;
-  --color-green-600: #30453E;
-  --color-green-dark: #2E3C37;
+  --color-green-600: #30453e;
+  --color-green-dark: #2e3c37;
+}
 
+@font-face {
+  font-family: "Fira Code";
+  src: url(/fonts/FiraCode-Regular.ttf);
+}
+body {
+  font-family: "Fira Code", monospace;
 }
