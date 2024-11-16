@@ -5,7 +5,15 @@ export default defineNuxtConfig({
   // },
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/content", "@nuxtjs/apollo"],
+  modules: ["@nuxt/ui", "@nuxt/content", "@nuxtjs/apollo", "@nuxtjs/i18n"],
+  i18n: {
+    vueI18n: "./i18n.config.ts",
+    locales: [
+      { code: "en", language: "en-US" },
+      { code: "es", language: "es-ES" },
+    ],
+    defaultLocale: "en",
+  },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
   },
