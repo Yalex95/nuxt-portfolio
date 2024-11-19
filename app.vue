@@ -1,9 +1,7 @@
 <template>
-  <div class="flex flex-col min-h-screen">
-   <UINavigationBar/>
-    <main
-      class="mx-auto max-w-7xl mb-10 grow items-start w-full"
-    >
+  <div class="flex flex-col min-h-screen bg-gray-800">
+    <UINavigationBar />
+    <main class="mb-10 grow items-start w-full">
       <NuxtPage />
     </main>
     <SiteFooter />

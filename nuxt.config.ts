@@ -13,7 +13,12 @@ export default defineNuxtConfig({
       { code: "en", language: "en-US" },
       { code: "es", language: "es-ES" },
     ],
-    defaultLocale: "en",
+    // defaultLocale: "en",
+    detectBrowserLanguage:{
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,

@@ -27,11 +27,16 @@
   --color-green-500: #315146;
   --color-green-600: #30453e;
   --color-green-dark: #2e3c37;
+  /* --color-gray-800: rgb(31, 41, 55); */
 }
 
 @font-face {
   font-family: "Fira Code";
   src: url(/fonts/FiraCode-Regular.ttf);
+}
+@font-face {
+  font-family: "Sansation";
+  src: url(/fonts/Sansation_Regular.ttf);
 }
 body {
   font-family: "Fira Code", monospace;
