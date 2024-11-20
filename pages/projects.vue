@@ -27,31 +27,49 @@ const query = gql`
 const { data } = await useAsyncQuery(query);
 </script>
 <template>
-  <h1 class="text-5xl font-bold mt-20">Projects</h1>
-  <p class="text-base p-2">Here are some of my projects</p>
-  <section class="grid grid-cols-2 gap-10">
+  <NuxtLayout itemActiveName="projects">
     <div
-      v-for="project in data.viewer.repositories.nodes"
-      class="p-8 border-4 my-4 rounded-lg hover:bg-gray-500"
+      id="projects"
+      class="flex flex-col w-full md:w-11/12 mx-auto text-white justify-center items-center"
     >
-      <a :href="project.url" target="_blank">
-        <h2 class="text-2xl text-indigo-800 font-semibold mb-2 hover:underline">
-          {{ project.name }}
-        </h2>
-      </a>
-      <p>{{ project.description }}</p>
-      <div class="mt-4">
-        <Icon name="fontisto:star" size="1.1rem" class="text-indigo-700" />
-        Stars: {{ project.stargazers.totalCount }}
-        <Icon
-          name="system-uicons:branch"
-          size="1.1rem"
-          class="text-indigo-800"
-        />
-        Forks: {{ project.forks.totalCount }}
-        <Icon name="system-uicons:eye" size="1.1rem" class="text-indigo-700" />
-        Watchers: {{ project.watchers.totalCount }}
-      </div>
+      <h1 class="text-5xl font-bold mt-20">Projects</h1>
+      <p class="text-base p-2">Here are some of my projects</p>
+      <section class="grid grid-cols-3 gap-10">
+        <div
+          v-for="project in data.viewer.repositories.nodes"
+          class="p-8 border-4 my-4 rounded-lg hover:bg-gray-500"
+        >
+          <a :href="project.url" target="_blank">
+            <h2
+              class="text-2xl text-indigo-800 font-semibold mb-2 hover:underline"
+            >
+              {{ project.name }}
+            </h2>
+          </a>
+          <p>{{ project.description }}</p>
+          <div class="mt-4">
+            <Icon name="fontisto:star" size="1.1rem" class="text-indigo-700" />
+            Stars: {{ project.stargazers.totalCount }}
+            <Icon
+              name="system-uicons:branch"
+              size="1.1rem"
+              class="text-indigo-800"
+            />
+            Forks: {{ project.forks.totalCount }}
+            <Icon
+              name="system-uicons:eye"
+              size="1.1rem"
+              class="text-indigo-700"
+            />
+            Watchers: {{ project.watchers.totalCount }}
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
+  </NuxtLayout>
 </template>
+<style scoped>
+#projects {
+  min-height: 90vh;
+}
+</style>
