@@ -6,6 +6,8 @@ const { data: posts } = await useAsyncData("latest-posts", () =>
 </script>
 <template>
   <SectionHero />
+  <SectionAbout />
+  <TechStack/>
   <section
     class="flex flex-col w-full md:w-8/12 mx-auto text-white justify-center items-center relative"
   >

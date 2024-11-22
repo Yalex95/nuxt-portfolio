@@ -3,9 +3,18 @@ export default defineNuxtConfig({
   // colorMode: {
   //   preference: "light",
   // },
+  app: {
+    baseURL: '/', // Ensure consistency here
+  },
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/content", "@nuxtjs/apollo", "@nuxtjs/i18n"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxt/content",
+    "@nuxtjs/apollo",
+    "@nuxtjs/i18n",
+    "nuxt-swiper",
+  ],
   css: ["~/assets/css/index.css"],
   i18n: {
     vueI18n: "./i18n.config.ts",

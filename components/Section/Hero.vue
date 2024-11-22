@@ -1,6 +1,6 @@
 <template>
   <section
-    class="flex flex-col w-full text-white justify-center items-center relative"
+    class="flex flex-col w-full text-white justify-center items-center relative py-12 mt-20"
     id="hero"
   >
     <div class="w-10/12 md:w-6/12 xl:w-4/12 md:text-center">
