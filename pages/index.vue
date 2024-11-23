@@ -115,16 +115,17 @@ const sliderOptions = {
 <template>
   <div class="bg-greenbg">
     <SectionHero />
-    <div class="purple-grad">
-      <Slider
+    
+    <Slider
       :slides="techStack"
       sliderClass="flex flex-col"
       imageClass="w-1/2 h-1/2"
       titleClass="text-xl mt-4 capitalize font-semibold"
+      sliderWrapperClass="purple-grad"
     />
-  </div>
     <SectionAbout />
     <!-- SOFT SKILLS -->
+    
     <Slider
       :sliderOptions="sliderOptions"
       :slides="softSkills"
