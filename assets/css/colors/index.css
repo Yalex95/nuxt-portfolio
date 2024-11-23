@@ -27,7 +27,24 @@
   --color-green-500: #315146;
   --color-green-600: #30453e;
   --color-green-dark: #2e3c37;
+  /* --color-primary-500: #79F297; */
   /* --color-gray-800: rgb(31, 41, 55); */
+}
+/* Color Theme Swatches in Hex */
+.theme-1 {
+  background-color: #203359;
+}
+.theme-2 {
+  background-color: #c2d2f2;
+}
+.theme-black {
+  background-color: #0a1626;
+}
+.theme-4 {
+  background-color: #79f297;
+}
+.theme-5 {
+  background-color: #60bf78;
 }
 
 @font-face {

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen bg-gray-800">
+  <div class="flex flex-col min-h-screen theme-black">
     <UINavigationBar />
     <main class="mb-10 grow items-start w-full">
       <NuxtPage />

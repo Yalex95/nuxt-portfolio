@@ -32,35 +32,43 @@ const props = defineProps({
     type: String,
     default: "",
   },
+  sliderWrapperClass: {
+    type: String,
+    default: "w-10/12 mx-auto py-12",
+  },
+  lang:{
+    type: Boolean,
+    default: false
+  },
+  sliderOptions: {
+    type: Object,
+    default: {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      speed: 1000,
+      allowTouchMove: true,
+      slidesPerView: 3,
+      breakpoints: {
+        320: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        640: {
+          slidesPerView: 5,
+          spaceBetween: 40,
+        },
+      },
+    },
+  },
 });
 const containerRef = ref(null);
-const swiper = useSwiper(containerRef, {
-  loop: true,
-  autoplay: {
-    delay: 2000,
-  },
-  speed: 1000,
-  allowTouchMove: true,
-  slidesPerView: 3,
-  // Responsive breakpoints
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 5,
-      spaceBetween: 40,
-    },
-  },
-});
+const swiper = useSwiper(containerRef, props.sliderOptions);
 
 onMounted(() => {
   console.log(swiper.instance);
@@ -68,7 +76,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="w-10/12 mx-auto py-12">
+  <section :class="sliderWrapperClass">
     <ClientOnly>
       <swiper-container ref="containerRef" :init="false">
         <swiper-slide
@@ -81,8 +89,13 @@ onMounted(() => {
             :src="`./images/home/${item.image}`"
             :alt="item.title"
           />
-          <h2 :class="titleClass">{{ item.title }}</h2>
-          <p :class="descriptionClass" v-if="showDescription">
+          <h2 v-if="lang"  :class="titleClass">{{ $t(item.title) }}</h2>
+          <h2 v-if="!lang" :class="titleClass">{{ item.title }}</h2>
+
+          <p v-if="lang && showDescription " :class="descriptionClass" >
+            {{ $t(item.description) }}
+          </p>
+          <p v-if="!lang && showDescription " :class="descriptionClass" >
             {{ item.description }}
           </p>
         </swiper-slide>

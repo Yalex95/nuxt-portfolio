@@ -1,10 +1,9 @@
-
 {
   "about": "Sobre mi",
   "aboutMeText": "Navegué hábilmente a través de una variada pila tecnológica, que incluye HTML, CSS, SASS, Bootstrap, JavaScript y jQuery. Demostré competencia en el control de versiones utilizando Git, con un enfoque particular en plataformas como GitHub y Bitbucket. Integré sin problemas APIs Restful, mejorando la funcionalidad y alcance de los proyectos. Además, contribuí al desarrollo de temas de WordPress, utilizando herramientas como ACF para crear soluciones robustas y personalizadas. Mi experiencia también se extendió a React.js, donde diseñé experiencias web dinámicas y atractivas.",
   "contactText": "Contáctame",
   "contactMeSub": "¡DALE VIDA A",
-  "contactMeSubtitle":"TU SITIO WEB SOÑADO!",
+  "contactMeSubtitle": "TU SITIO WEB SOÑADO!",
   "contactMeDesc": "Desde las primeras sesiones de lluvia de ideas hasta el lanzamiento final, estaré a tu lado ofreciendo ideas, soluciones creativas y un apoyo inquebrantable. Comprendo que cada proyecto es único y estoy comprometido a adaptar nuestro viaje a tus necesidades y aspiraciones específicas. Ya sea que tengas un plan claro o solo la chispa de una idea, estoy aquí para ayudarte a darle forma a un verdadero obra maestra digital.",
   "contact": "Contacto",
   "downloadTextBtn": "Descarga mi CV!",
@@ -14,5 +13,26 @@
   "showcase": "Muestra de Trabajos",
   "recentProject": "Proyecto Reciente",
   "projects": "Projectos",
-  "projectName":"Nombre del proyecto" 
+  "projectName": "Nombre del proyecto",
+
+  "communicationSkills": "Habilidades de Comunicación",
+  "communicationSkillsDesciption": "Claramente articulando ideas y feedback, comprendiendo y interpretando las necesidades del cliente, colaborando con miembros del equipo en diferentes departamentos.",
+  "teamworkCollaboration": "Trabajo en Equipo y Colaboración",
+  "teamworkCollaborationDescription": "Trabajar eficazmente en un ambiente de equipo, estar abierto a recibir comentarios y dispuesto a brindar comentarios constructivos a los demás, compartir conocimientos y ayudar a los miembros del equipo cuando sea necesario.",
+  "problemSolvingAbility": "Capacidad de Solucionar Problemas",
+  "problemSolvingAbilityDescription": "Pensar críticamente para identificar problemas y encontrar soluciones efectivas, abordar los problemas con una mentalidad lógica y analítica, mantener la calma y la compostura bajo presión.",
+  "adaptabilityFlexibility": "Adaptabilidad y Flexibilidad",
+  "adaptabilityFlexibilityDescription": "Estar abierto a nuevas tecnologías, herramientas y metodologías, adaptarse a los requisitos cambiantes del proyecto o las necesidades del cliente, gestionar múltiples tareas y prioridades de manera efectiva.",
+  "timeManagementOrganization": "Tiempo de Gestión y Organización",
+  "timeManagementOrganizationDescription": "Priorizar tareas y gestionar el tiempo de manera eficiente, cumplir con los plazos sin comprometer la calidad, realizar un seguimiento del progreso y las actualizaciones del proyecto.",
+  "attentionToDetail": "Atención al Detalle",
+  "attentionToDetailDescription": "Garantizar precisión y exactitud en la codificación y el diseño, realizar pruebas y depuraciones exhaustivas y mantener altos estándares de calidad y usabilidad.",
+  "creativityInnovation": "Creatividad e Innovación",
+  "creativityInnovationDescription": "Aportando ideas frescas y soluciones creativas a los proyectos, mejorando la experiencia del usuario a través de un diseño y funcionalidad innovadores, manteniéndose actualizado con las últimas tendencias y tecnologías de diseño.",
+  "empathyUserCentricThinking": "Empatía y Pensamiento centrado en el Usuario",
+  "empathyUserCentricThinkingDescription": "Comprender y anticipar las necesidades y comportamientos de los usuarios, diseñar y desarrollar pensando en el usuario final, creando interfaces intuitivas y accesibles.",
+  "resiliencePerseverance": "Resilencia y Perseverancia",
+  "resilencePerseveranceDescription": "Manejar los reveses y las críticas de manera positiva, continuar superando desafíos y obstáculos, mantenerse motivado y comprometido con el aprendizaje y la mejora continuos.",
+  "conflictResolution": "Resolucion de Conflictos",
+  "conflictResolutionDescription": "Abordar y resolver desacuerdos de manera constructiva, encontrar puntos en común y llegar a compromisos, manteniendo un ambiente de equipo positivo y colaborativo."
 }

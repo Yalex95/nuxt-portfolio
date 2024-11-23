@@ -10,7 +10,7 @@
       class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"
       :class="[!scrolled && open ? 'bg-[#190039]' : '']"
     >
-      <div class="relative flex h-16 items-center justify-between">
+      <div class="relative flex items-center justify-between">
         <div
           class="absolute inset-y-0 left-0 flex w-full items-center sm:hidden"
         >
@@ -30,22 +30,22 @@
         <div
           class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between"
         >
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
+          <div class="hidden sm:block">
+            <div class="flex">
               <a
                 v-for="item in navigation"
                 :key="item.name"
                 :href="item.href"
                 :class="[
-                  item.current ? 'bg-[#b20dbb]' : ' hover:text-[#b20dbb]',
-                  ' px-3 py-2  font-bold  text-white',
+                  item.current ? 'item-active' : ' active-item',
+                  ' px-5  font-bold  text-white py-4 ',
                 ]"
                 :aria-current="item.current ? 'page' : undefined"
                 >{{ item.name }}</a
               >
             </div>
           </div>
-          <div class="hidden sm:block">
+          <div class="hidden sm:flex sm:items-center sm:justify-center">
             <!-- <ClientOnly>
               <div class="flex items-center gap-4">
                 <NuxtLink :to="switchLocalePath('en')">English</NuxtLink>
@@ -68,7 +68,7 @@
                 <ClientOnly>
                   <NuxtLink
                     class="font-bold"
-                    :class="{ 'text-[#b20dbb]': locale === 'es' }"
+                    :class="{ 'text-[#79F297]': locale === 'es' }"
                     :to="switchLocalePath('es')"
                   >
                     ES
@@ -76,7 +76,7 @@
                   |
                   <NuxtLink
                     class="font-bold"
-                    :class="{ 'text-[#b20dbb]': locale === 'en' }"
+                    :class="{ 'text-[#79F297]': locale === 'en' }"
                     :to="switchLocalePath('en')"
                   >
                     EN
@@ -153,11 +153,17 @@ onUnmounted(() => {
   z-index: 3;
   width: 100%;
 }
-
+.item-active {
+  background-color: #203359;
+}
+.active-item:hover {
+  /* border: solid 1px #cbc5d991; */
+  background-color: #203359;
+}
 .scrolled {
-  background-color: #1f2937;
+  background-color: #0a1626;
   position: fixed;
   z-index: 3;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example box shadow */
+  box-shadow: 0 2px 4px rgb(0, 0, 0); /* Example box shadow */
 }
 </style>

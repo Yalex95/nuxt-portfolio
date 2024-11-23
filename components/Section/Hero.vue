@@ -34,6 +34,7 @@
 <style>
 #hero {
   min-height: 100vh;
+  position: relative
 }
 #hero h1 {
   font-size: 40px;
@@ -45,5 +46,24 @@
 #hero h1,
 #hero h6 {
   font-weight: 700;
+}
+#hero::after,#hero::before{
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+#hero::after{
+  left: 20%;
+  background-image: url("/images/home/tag_right.svg");
+  background-position: left center;
+}
+#hero::before{
+  right: 20%;
+  background-image: url("/images/home/tag_left.svg");
+  background-position: right center;
 }
 </style>

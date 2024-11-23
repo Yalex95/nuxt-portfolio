@@ -9,11 +9,11 @@ const links = [
 ];
 </script>
 <template>
-  <footer class="bg-gray-800">
+  <footer >
     <section
       class="mx-auto max-w-7xl px-2 sm:px-4 lg:py-6 text-gray flex flex-row"
     >
-      <p class="flex-1 text-primary-500">
+      <p class="flex-1 text-[#79F297]">
         &copy; Yeris Aguilar 2023. All Rights Reserved
       </p>
       <div class="flex flex-row justify-center gap-4 mb-4 mt-2">

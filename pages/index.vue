@@ -39,88 +39,125 @@ const techStack = [
 let softSkills = [
   {
     image: "/skills/communication.svg",
-    title: "Communication Skills",
-    description:
-      "Clearly articulating ideas and feedback, understanding and interpreting client requirements, collaborating with team members across different departments.",
+    title: "communicationSkills",
+    description: "communicationSkillsDesciption",
   },
   {
     image: "/skills/teamwork.svg",
-    title: "Teamwork and Collaboration",
-    description:
-      "Working effectively in a team environment, being open to feedback and willing to provide constructive feedback to others, sharing knowledge and assisting team members when needed.",
+    title: "teamworkCollaboration",
+    description: "teamworkCollaborationDescription",
   },
   {
     image: "/skills/problem_solving.svg",
-    title: "Problem-Solving Ability",
-    description:
-      "Thinking critically to identify issues and find effective solutions, approaching problems with a logical and analytical mindset, staying calm and composed under pressure.",
+    title: "problemSolvingAbility",
+    description: "problemSolvingAbilityDescription",
   },
   {
     image: "/skills/adaptability.svg",
-    title: "Adaptability and Flexibility",
-    description:
-      "Being open to new technologies, tools, and methodologies, adjusting to changing project requirements or client needs, managing multiple tasks and priorities effectively.",
+    title: "adaptabilityFlexibility",
+    description: "adaptabilityFlexibilityDescription",
   },
   {
     image: "/skills/time_management.svg",
-    title: "Time Management and Organization",
-    description:
-      "Prioritizing tasks and managing time efficiently, meeting deadlines without compromising quality, keeping track of project progress and updates.",
+    title: "timeManagementOrganization",
+    description: "timeManagementOrganizationDescription",
   },
   {
     image: "/skills/attention_to_detail.svg",
-    title: "Attention to Detail",
-    description:
-      "Ensuring precision and accuracy in coding and design, conducting thorough testing and debugging, maintaining high standards of quality and usability.",
+    title: "attentionToDetail",
+    description: "attentionToDetailDescription",
   },
   {
     image: "/skills/creativity.svg",
-    title: "Creativity and Innovation",
-    description:
-      "Bringing fresh ideas and creative solutions to projects, enhancing user experience through innovative design and functionality, staying updated with the latest design trends and technologies.",
+    title: "creativityInnovation",
+    description: "creativityInnovationDescription",
   },
   {
     image: "/skills/empathy.svg",
-    title: "Empathy and User-Centric Thinking",
-    description:
-      "Understanding and anticipating user needs and behaviors, designing and developing with the end-user in mind, creating intuitive and accessible interfaces.",
+    title: "empathyUserCentricThinking",
+    description: "empathyUserCentricThinkingDescription",
   },
   {
     image: "/skills/resilience.svg",
-    title: "Resilience and Perseverance",
-    description:
-      "Handling setbacks and criticism positively, continuing to push through challenges and obstacles, staying motivated and committed to continuous learning and improvement.",
+    title: "resiliencePerseverance",
+    description: "resiliencePerseveranceDescription",
   },
   {
     image: "/skills/conflict_resolution.svg",
-    title: "Conflict Resolution",
-    description:
-      "Addressing and resolving disagreements in a constructive manner, finding common ground and reaching compromises, maintaining a positive and collaborative team environment.",
+    title: "conflictResolution",
+    description: "conflictResolutionDescription",
   },
 ];
+const sliderOptions = {
+  loop: true,
+  autoplay: {
+    delay: 4000,
+  },
+  speed: 1000,
+  allowTouchMove: true,
+  slidesPerView: 3,
+  breakpoints: {
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    480: {
+      slidesPerView: 3.5,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 4.5,
+      spaceBetween: 50,
+    },
+  },
+};
 </script>
 <template>
-  <SectionHero />
-  <SectionAbout />
-  <Slider
-    :slides="techStack"
-    sliderClass="flex flex-col"
-    imageClass="w-1/2 h-1/2"
-    titleClass="text-xl mt-4 capitalize font-semibold"
-  />
-  <Slider
-    :slides="softSkills"
-    sliderClass="flex flex-col justify-center items-center"
-    :showDescription="true"
-    titleClass="text-center capitalize font-semibold"
-    descriptionClass="text-sm"
-  />
-  <section
-    class="flex flex-col w-full md:w-8/12 mx-auto text-white justify-center items-center relative"
-  >
-    <h2 class="text-3xl font-bold mt-8">Latest Blog Post</h2>
-    <div class="grid mt-8 gap-10 md:grid-cols-3">
-      <Post :post="posts" />
-    </div>
-  </section>
+  <div class="bg-greenbg">
+    <SectionHero />
+    <div class="purple-grad">
+      <Slider
+      :slides="techStack"
+      sliderClass="flex flex-col"
+      imageClass="w-1/2 h-1/2"
+      titleClass="text-xl mt-4 capitalize font-semibold"
+    />
+  </div>
+    <SectionAbout />
+    <!-- SOFT SKILLS -->
+    <Slider
+      :sliderOptions="sliderOptions"
+      :slides="softSkills"
+      sliderClass="flex flex-col justify-center items-center border-2 border-[#79F297] rounded-md px-8 py-8 h-min  min-h-72 cursor-pointer "
+      :showDescription="true"
+      imageClass="w-10 h-10"
+      titleClass="text-center capitalize font-semibold mt-5"
+      descriptionClass="text-sm mt-3"
+      sliderWrapperClass="py-10 bg-[#203359]"
+      :lang="true"
+    />
+    <section
+      class="flex flex-col w-full md:w-8/12 mx-auto text-white justify-center items-center relative"
+    >
+      <h2 class="text-3xl font-bold mt-8">Latest Blog Post</h2>
+      <div class="grid mt-8 gap-10 md:grid-cols-3">
+        <Post :post="posts" />
+      </div>
+    </section>
+    <Contact />
+  </div>
 </template>
+<style>
+.green-gradient {
+  background: linear-gradient(180deg, #1f0642, #00dc82);
+}
+.purple-grad {
+  background:linear-gradient(0deg, transparent, #3f295a, transparent);
+}
+.bg-greenbg {
+  background-image: url("/images/home/dc_.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+</style>
