@@ -1,5 +1,5 @@
 <template>
-  <div class="flex md:hidden justify-between items-center py-2  px-4 bg-[#A15AFF]">
+  <div class="flex md:hidden justify-between items-center py-2 px-4">
     <div class="block">
       <label class="inline-flex items-center cursor-pointer">
         <img src="/images/home/laguage.svg" alt="world icon" class="mr-3" />
@@ -22,7 +22,8 @@
       </label>
     </div>
     <div>
-      <Links :links="links" wrapperClass=" flex gap-2"/>
+      <!-- <Links :links="links" wrapperClass=" flex gap-2" /> -->
+      <UHorizontalNavigation :links="links" class="" />
     </div>
   </div>
 </template>
@@ -34,24 +35,19 @@ const isChecked = ref(false);
 let translate = useI18n();
 const links = [
   {
-    url: "https://www.linkedin.com/in/yeris-aguilar/",
-    icon: "",
-    alt: "LinkedIn icon",
+    to: "https://www.linkedin.com/in/yeris-aguilar/",
+    icon: "i-entypo-social-linkedin",
+    name: "LinkedIn icon",
   },
   {
-    url: "mailto:yerisaguilar95@gmail.com",
+    to: "mailto:yerisaguilar95@gmail.com",
     icon: "",
-    alt: "Email icon",
+    name: "Email icon",
   },
   {
-    url: "tel:+529632337458",
-    icon: "./assets/phone_white.svg",
-    alt: "Phone icon",
-  },
-  {
-    url: "https://github.com/Yalex95",
-    icon: "",
-    alt: "Github icon",
+    to: "https://github.com/Yalex95",
+    icon: "i-entypo-social-github",
+    name: "Github icon",
   },
 ];
 const handleCheckboxChange = (e) => {

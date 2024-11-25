@@ -53,11 +53,7 @@
               </div>
             </ClientOnly> -->
             <label class="inline-flex items-center cursor-pointer">
-              <img
-                src="/images/home/laguage.svg"
-                alt="world icon"
-                class="mr-3"
-              />
+              <UIcon name="heroicons:globe-americas" class="w-8 h-8 mr-2" />
               <input
                 type="checkbox"
                 v-model="isChecked"
@@ -117,15 +113,29 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { useI18n } from "vue-i18n";
-let translate = useI18n();
 const scrolled = ref(false);
 const isChecked = ref(false);
+const route = useRoute();
+
+console.log("query", route.hash);
 const navigation = [
-  { name: "Home", href: "/#hero", current: true },
-  { name: "About", href: "/#about", current: false },
-  { name: "Projects", href: "/projects", current: false },
-  { name: "Blog", href: "/blog", current: false },
-  { name: "Contact", href: "#contact", current: false },
+  {
+    name: "Home",
+    href: "/",
+    current: false,
+  },
+  { name: "About", href: "/#about", current: route.hash === "#about" },
+  {
+    name: "Projects",
+    href: "/projects",
+    current: route.path.includes("projects"),
+  },
+  { name: "Blog", href: "/blog", current: route.path.includes("blog") },
+  {
+    name: "Contact",
+    href: "/#contact",
+    current: route.hash === "#contact",
+  },
 ];
 const switchLocalePath = useSwitchLocalePath();
 

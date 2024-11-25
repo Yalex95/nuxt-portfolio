@@ -4,12 +4,12 @@
     id="hero"
   >
     <div class="w-10/12 md:w-6/12 xl:w-4/12 md:text-center">
-      <h6 class="uppercase"><span>Yeris Aguilar -</span> front end</h6>
-      <h1 class="uppercase mb-3">
-        Web <br class="display" />
+      <h6 class="uppercase text-lg md:text-2xl font-bold"><span>Yeris Aguilar </span> <br class="display sm:hidden"/>front end</h6>
+      <h1 class="uppercase mb-3 text-xl md:text-5xl font-bold">
+        Web <br class="display sm:hidden" />
         developer
       </h1>
-      <p>
+      <p class="text-sm md:text-lg">
         {{ $t("heroDescription") }}
       </p>
       <div
@@ -34,9 +34,10 @@
 <style>
 #hero {
   min-height: 100vh;
-  position: relative
+  position: relative;
+  background: linear-gradient(0deg, transparent,#0a1626, #0a1626,#0a1626);
 }
-#hero h1 {
+/* #hero h1 {
   font-size: 40px;
   font-family: Sansation;
 }
@@ -46,7 +47,7 @@
 #hero h1,
 #hero h6 {
   font-weight: 700;
-}
+} */
 #hero::after,#hero::before{
   content: "";
   position: absolute;

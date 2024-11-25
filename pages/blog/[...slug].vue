@@ -8,9 +8,9 @@ const { data } = await useAsyncData(`content-${path}`, () => {
   <ContentRenderer
     v-slot="{ data }"
     :value="data"
-    class="prose dark:prose-invert my-10 mx-auto max-w-7xl"
+    class="prose dark:prose-invert mt-48 mb-20 mx-auto max-w-7xl"
   />
-  <div class="my-10">
+  <div class="my-10 max-w-7xl mx-auto">
     <a
       v-for="tag in data.tags"
       :key="tag"

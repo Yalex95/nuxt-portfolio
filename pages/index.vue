@@ -98,24 +98,33 @@ const sliderOptions = {
   slidesPerView: 3,
   breakpoints: {
     320: {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 20,
     },
     480: {
-      slidesPerView: 3.5,
+      slidesPerView: 1,
       spaceBetween: 30,
     },
     640: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    960: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1280: {
       slidesPerView: 4.5,
       spaceBetween: 50,
     },
+    
   },
 };
 </script>
 <template>
   <div class="bg-greenbg">
     <SectionHero />
-    
+
     <Slider
       :slides="techStack"
       sliderClass="flex flex-col"
@@ -125,7 +134,7 @@ const sliderOptions = {
     />
     <SectionAbout />
     <!-- SOFT SKILLS -->
-    
+
     <Slider
       :sliderOptions="sliderOptions"
       :slides="softSkills"
@@ -137,14 +146,15 @@ const sliderOptions = {
       sliderWrapperClass="py-10 bg-[#203359]"
       :lang="true"
     />
-    <section
+    <SectionProjects />
+    <!-- <section
       class="flex flex-col w-full md:w-8/12 mx-auto text-white justify-center items-center relative"
     >
       <h2 class="text-3xl font-bold mt-8">Latest Blog Post</h2>
       <div class="grid mt-8 gap-10 md:grid-cols-3">
         <Post :post="posts" />
       </div>
-    </section>
+    </section> -->
     <Contact />
   </div>
 </template>
@@ -153,7 +163,7 @@ const sliderOptions = {
   background: linear-gradient(180deg, #1f0642, #00dc82);
 }
 .purple-grad {
-  background:linear-gradient(0deg, transparent, #3f295a, transparent);
+  background: linear-gradient(0deg, transparent, #3f295a, transparent);
 }
 .bg-greenbg {
   background-image: url("/images/home/dc_.svg");
