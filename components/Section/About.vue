@@ -28,7 +28,7 @@
           <ULink
             target="_blank"
             type="button"
-            class="mt-5 w-full"
+            class="mt-5 w-full md:w-3/5"
             active-class="text-white "
             inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] "
             >{{ $t("downloadTextBtn") }}</ULink

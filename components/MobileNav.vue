@@ -9,7 +9,7 @@
                     class="font-bold"
                     :class="{ 'text-[#79F297]': locale === 'es' }"
                     :to="switchLocalePath('es')"
-                  >
+                  >  
                     ES
                   </NuxtLink>
                   |
