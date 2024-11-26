@@ -117,7 +117,6 @@ const sliderOptions = {
       slidesPerView: 4.5,
       spaceBetween: 50,
     },
-    
   },
 };
 </script>
@@ -169,7 +168,7 @@ const sliderOptions = {
 .bg-greenbg {
   background-image: url("/images/home/dc_.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   background-position: top center;
 }
 </style>

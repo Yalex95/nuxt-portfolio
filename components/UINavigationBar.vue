@@ -12,18 +12,16 @@
     >
       <div class="relative flex items-center justify-between">
         <div
-          class="absolute inset-y-0 left-0 flex w-full items-center sm:hidden"
+          class=" inset-y-0 left-0 flex w-full items-center sm:hidden"
         >
           <!-- Mobile menu button-->
           <DisclosureButton
-            class="flex-row-reverse w-full gap-9 relative flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[#341063] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-transparent"
+            class="flex-row-reverse w-full relative flex items-center justify-between rounded-md p-2 text-gray-400 hover:bg-[#341063] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-transparent"
           >
-            <span class="absolute -inset-0.5" />
-            <span class="sr-only">Open main menu</span>
             <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
             <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
             <p class="uppercase text-center font-bold text-white">
-              Yeris Alejandra Aguilar
+              Yeris Aguilar
             </p>
           </DisclosureButton>
         </div>
@@ -46,20 +44,10 @@
             </div>
           </div>
           <div class="hidden sm:flex sm:items-center sm:justify-center">
-            <!-- <ClientOnly>
-              <div class="flex items-center gap-4">
-                <NuxtLink :to="switchLocalePath('en')">English</NuxtLink>
-                <NuxtLink :to="switchLocalePath('es')">Español</NuxtLink>
-              </div>
-            </ClientOnly> -->
+            
             <label class="inline-flex items-center cursor-pointer">
               <UIcon name="heroicons:globe-americas" class="w-8 h-8 mr-2" />
-              <input
-                type="checkbox"
-                v-model="isChecked"
-                class="sr-only peer"
-                @change=""
-              />
+              
               <div class="flex gap-1 justify-center items-center">
                 <ClientOnly>
                   <NuxtLink
@@ -114,7 +102,6 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { useI18n } from "vue-i18n";
 const scrolled = ref(false);
-const isChecked = ref(false);
 const route = useRoute();
 
 console.log("query", route.hash);

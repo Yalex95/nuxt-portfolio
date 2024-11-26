@@ -2,23 +2,27 @@
   <div class="flex md:hidden justify-between items-center py-2 px-4">
     <div class="block">
       <label class="inline-flex items-center cursor-pointer">
-        <img src="/images/home/laguage.svg" alt="world icon" class="mr-3" />
-        <input
-          type="checkbox"
-          v-model="isChecked"
-          class="sr-only peer"
-          @change="handleCheckboxChange"
-        />
-        <div
-          :class="{
-            'peer-checked:after:translate-x-full': isChecked,
-            'rtl:peer-checked:after:-translate-x-full': isChecked,
-          }"
-          class="flex gap-1 justify-center items-center dark:bg-transparent ring-2 ring-[#FFF] relative w-11 h-6 bg-transparent peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-[#FFF] dark:peer-focus:ring-[#FFF] rounded-full peer peer-checked:after:border-[#FFF] after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-[#FFF] after:border-transparent after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-transparent peer-checked:bg-transparent"
-        >
-          <p class="text-white text-xs">ES</p>
-          <p class="text-white text-xs">EN</p>
-        </div>
+        <UIcon name="heroicons:globe-americas" class="w-8 h-8 mr-2" />
+              <div class="flex gap-1 justify-center items-center">
+                <ClientOnly>
+                  <NuxtLink
+                    class="font-bold"
+                    :class="{ 'text-[#79F297]': locale === 'es' }"
+                    :to="switchLocalePath('es')"
+                  >
+                    ES
+                  </NuxtLink>
+                  |
+                  <NuxtLink
+                    class="font-bold"
+                    :class="{ 'text-[#79F297]': locale === 'en' }"
+                    :to="switchLocalePath('en')"
+                  >
+                    EN
+                  </NuxtLink>
+                </ClientOnly>
+              </div>
+        
       </label>
     </div>
     <div>
@@ -28,11 +32,8 @@
   </div>
 </template>
 <script setup>
-// import Cookie from "cookie-universal";
-import { useI18n } from "vue-i18n";
-const isChecked = ref(false);
-// const $cookies = Cookie();
-let translate = useI18n();
+const switchLocalePath = useSwitchLocalePath();
+const { locale } = useI18n();
 const links = [
   {
     to: "https://www.linkedin.com/in/yeris-aguilar/",
@@ -50,16 +51,5 @@ const links = [
     name: "Github icon",
   },
 ];
-const handleCheckboxChange = (e) => {
-  isChecked.value = e.target.checked;
 
-  if (isChecked.value) {
-    translate.locale.value = "es";
-    $cookies.set("locale", "es");
-  }
-  if (!isChecked.value) {
-    translate.locale.value = "en";
-    $cookies.set("locale", "en");
-  }
-};
 </script>
