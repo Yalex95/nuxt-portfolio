@@ -107,7 +107,7 @@ const sliderOptions = {
     },
     640: {
       slidesPerView: 3,
-      spaceBetween: 50,
+      spaceBetween: 20,
     },
     960: {
       slidesPerView: 3,
@@ -130,7 +130,7 @@ const sliderOptions = {
       sliderClass="flex flex-col"
       imageClass="w-1/2 h-1/2"
       titleClass="text-xl mt-4 capitalize font-semibold"
-      sliderWrapperClass="purple-grad"
+      sliderWrapperClass="purple-grad "
     />
     <SectionAbout />
     <!-- SOFT SKILLS -->
@@ -138,13 +138,14 @@ const sliderOptions = {
     <Slider
       :sliderOptions="sliderOptions"
       :slides="softSkills"
-      sliderClass="flex flex-col justify-center items-center border-2 border-[#79F297] rounded-md px-8 py-8 h-min  min-h-72 cursor-pointer "
+      sliderClass="flex flex-col justify-center items-center border-2 border-[#79F297] rounded-md px-4 py-5 lg:px-8 lg:py-8 h-min  min-h-72 cursor-pointer "
       :showDescription="true"
       imageClass="w-10 h-10"
       titleClass="text-center capitalize font-semibold mt-5"
-      descriptionClass="text-sm mt-3"
-      sliderWrapperClass="py-10 bg-[#203359]"
+      descriptionClass="text-sm mt-3 font-light line-clamp-4 md:line-clamp-3"
+      sliderWrapperClass="py-20 md:py-10 bg-[#203359] px-10 md:px-0"
       :lang="true"
+      :showReadMore="true"
     />
     <SectionProjects />
     <!-- <section

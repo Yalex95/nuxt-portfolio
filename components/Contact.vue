@@ -25,8 +25,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 <template>
   <section id="contact">
-    <div id="contact-me" class="flex md:w-8/12 w-full flex-row mx-auto py-20 justify-center md:justify-start">
-      <div class="md:w-8/12 w-11/12 flex justify-center items-center py-10 flex-col">
+    <div id="contact-me" class="flex md:w-11/12 lg:w-8/12 w-full flex-row mx-auto py-10 lg:py-20 justify-center lg:justify-start">
+      <div class="md:w-10/12 w-11/12 flex justify-center items-center py-10 flex-col">
         <div class="flex flex-col py-10">
           <h2 class="text-3xl font-bold uppercase">{{ $t("contactText") }}</h2>
           <h3 class="font-bold text-2xl uppercase">{{ $t("contactMeSub") }}</h3>

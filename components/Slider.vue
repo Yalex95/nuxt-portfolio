@@ -20,6 +20,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  showReadMore: {
+    type: Boolean,
+    default: false,
+  },
   slidesPerView: {
     type: Number,
     default: 3,
@@ -36,9 +40,9 @@ const props = defineProps({
     type: String,
     default: "w-10/12 mx-auto py-12",
   },
-  lang:{
+  lang: {
     type: Boolean,
-    default: false
+    default: false,
   },
   sliderOptions: {
     type: Object,
@@ -60,8 +64,16 @@ const props = defineProps({
           spaceBetween: 30,
         },
         640: {
+          slidesPerView: 4,
+          spaceBetween: 100,
+        },
+        960: {
           slidesPerView: 5,
           spaceBetween: 40,
+        },
+        1280: {
+          slidesPerView: 5,
+          spaceBetween: 50,
         },
       },
     },
@@ -73,6 +85,9 @@ const swiper = useSwiper(containerRef, props.sliderOptions);
 onMounted(() => {
   console.log(swiper.instance);
 });
+
+
+
 </script>
 
 <template>
@@ -89,15 +104,25 @@ onMounted(() => {
             :src="`./images/home/${item.image}`"
             :alt="item.title"
           />
-          <h2 v-if="lang"  :class="titleClass">{{ $t(item.title) }}</h2>
+          <h2 v-if="lang" :class="titleClass">{{ $t(item.title) }}</h2>
           <h2 v-if="!lang" :class="titleClass">{{ item.title }}</h2>
 
-          <p v-if="lang && showDescription " :class="descriptionClass" >
+          <p v-if="lang && showDescription" :class="descriptionClass">
             {{ $t(item.description) }}
           </p>
-          <p v-if="!lang && showDescription " :class="descriptionClass" >
+          <p
+            v-if="!lang && showDescription"
+            :class=" descriptionClass"
+          >
             {{ item.description }}
           </p>
+          <UButton
+            v-if="showReadMore"
+            class="mt-5 block lg:hidden"
+            color="primary"
+            size="lg"
+            :label="$t('readMore')"
+          />
         </swiper-slide>
       </swiper-container>
     </ClientOnly>

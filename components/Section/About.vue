@@ -1,15 +1,15 @@
 <template>
   <section
-    class="flex flex-col justify-center items-center relative py-12"
+    class="flex flex-col justify-center items-center relative py-12 px-10 md:px-0"
     id="about"
   >
     <div
-      class="container py-20 px-10 grid grid-cols-1 md:grid-cols-2"
+      class="lg:py-20 lg:px-10 grid grid-cols-1 md:grid-cols-2 mgap-10 lg:gap-0 py-10 px-10 md:px-0 lg:p-0"
       id="about-me"
     >
       <!-- image -->
-      <div class="flex-row flex justify-center relative ">
-        <div class="relative pt-6 pl-8">
+      <div class="flex-row flex justify-center relative md:order-1 order-2">
+        <div class="relative pt-10 md:pt-6 md:pl-8 ">
           <img
             src="/images/home/img.png"
             class="rounded-lg relative z-0"
@@ -18,15 +18,17 @@
         </div>
       </div>
       <!-- about text -->
-      <div class="">
-        <h2 class="uppercase text-3xl font-bold">Yeris Alejandra Aguilar</h2>
-        <p class="my-3">{{ $t("aboutMeText") }}</p>
+      <div class="oreder-1 md:order-2">
+        <h2 class="uppercase md:text-xl lg:text-3xl font-bold">
+          Yeris Alejandra Aguilar
+        </h2>
+        <p class="my-3 text-sm lg:text-lg">{{ $t("aboutMeText") }}</p>
 
         <div class="relative">
           <ULink
             target="_blank"
             type="button"
-            class="mt-5"
+            class="mt-5 w-full"
             active-class="text-white "
             inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] "
             >{{ $t("downloadTextBtn") }}</ULink
@@ -45,7 +47,7 @@
 #about-me {
   position: relative;
 }
-#about-me>div{
+#about-me > div {
   z-index: 1;
 }
 #about-me::after {
@@ -58,7 +60,7 @@
   right: 0;
   background: linear-gradient(180deg, #170531, #1f0642, #00dc82);
   opacity: 0.5;
- 
+
   backdrop-filter: blur(2px);
 }
 #about-me h2 {

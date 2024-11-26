@@ -4,7 +4,9 @@
     id="hero"
   >
     <div class="w-10/12 md:w-6/12 xl:w-4/12 md:text-center">
-      <h6 class="uppercase text-lg md:text-2xl font-bold"><span>Yeris Aguilar </span> <br class="display sm:hidden"/>front end</h6>
+      <h6 class="uppercase text-lg md:text-2xl font-bold">
+        <span>Yeris Aguilar </span> <br class="display sm:hidden" />front end
+      </h6>
       <h1 class="uppercase mb-3 text-xl md:text-5xl font-bold">
         Web <br class="display sm:hidden" />
         developer
@@ -16,6 +18,7 @@
         class="btn-container mt-5 relative flex-row flex md:justify-center gap-2"
       >
         <ULink
+        to="/#contact"
           type="button"
           active-class="text-white "
           inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] "
@@ -35,36 +38,34 @@
 #hero {
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(0deg, transparent,#0a1626, #0a1626,#0a1626);
+  background: linear-gradient(0deg, transparent, #0a1626, #0a1626, #0a1626);
 }
-/* #hero h1 {
-  font-size: 40px;
-  font-family: Sansation;
-}
-#hero h6 {
-  font-size: 16px;
-}
-#hero h1,
-#hero h6 {
-  font-weight: 700;
-} */
-#hero::after,#hero::before{
+
+#hero::after,
+#hero::before {
   content: "";
   position: absolute;
   width: 20%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
-
 }
-#hero::after{
+#hero::after {
   left: 20%;
   background-image: url("/images/home/tag_right.svg");
   background-position: left center;
 }
-#hero::before{
+#hero::before {
   right: 20%;
   background-image: url("/images/home/tag_left.svg");
   background-position: right center;
+}
+@media screen and (max-width: 960px) {
+  #hero::after {
+    left: 5%;
+  }
+  #hero::before {
+    right: 5%;
+  }
 }
 </style>
