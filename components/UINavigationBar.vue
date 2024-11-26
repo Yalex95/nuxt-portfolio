@@ -11,9 +11,7 @@
       :class="[!scrolled && open ? 'bg-[#190039]' : '']"
     >
       <div class="relative flex items-center justify-between">
-        <div
-          class=" inset-y-0 left-0 flex w-full items-center sm:hidden"
-        >
+        <div class="inset-y-0 left-0 flex w-full items-center sm:hidden">
           <!-- Mobile menu button-->
           <DisclosureButton
             class="flex-row-reverse w-full relative flex items-center justify-between rounded-md p-2 text-gray-400 hover:bg-[#341063] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-transparent"
@@ -44,10 +42,9 @@
             </div>
           </div>
           <div class="hidden sm:flex sm:items-center sm:justify-center">
-            
             <label class="inline-flex items-center cursor-pointer">
               <UIcon name="heroicons:globe-americas" class="w-8 h-8 mr-2" />
-              
+
               <div class="flex gap-1 justify-center items-center">
                 <ClientOnly>
                   <NuxtLink
@@ -138,7 +135,7 @@ const handleScroll = () => {
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 });
-
+// consoles.lele
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
