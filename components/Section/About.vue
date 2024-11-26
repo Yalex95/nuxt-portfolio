@@ -9,7 +9,7 @@
     >
       <!-- image -->
       <div class="flex-row flex justify-center relative md:order-1 order-2">
-        <div class="relative pt-10 md:pt-6 md:pl-8 ">
+        <div class="relative pt-10 md:pt-6 md:pl-8">
           <img
             src="/images/home/img.png"
             class="rounded-lg relative z-0"
@@ -50,6 +50,7 @@
 #about-me > div {
   z-index: 1;
 }
+/* commetn */
 #about-me::after {
   content: "";
   position: absolute;
