@@ -101,7 +101,6 @@ import { useI18n } from "vue-i18n";
 const scrolled = ref(false);
 const route = useRoute();
 
-console.log("query", route.hash);
 const navigation = [
   {
     name: "Home",

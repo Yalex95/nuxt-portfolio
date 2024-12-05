@@ -4,7 +4,7 @@
     id="about"
   >
     <div
-      class="lg:py-20 lg:px-10 grid grid-cols-1 md:grid-cols-2 mgap-10 lg:gap-0 py-10 px-10 md:px-0 lg:p-0"
+      class="lg:py-20 lg:px-10 grid grid-cols-1 md:grid-cols-2 mgap-10 lg:gap-0 py-10 px-10 md:px-0 lg:p-0 md:w-8/12"
       id="about-me"
     >
       <!-- image -->
@@ -28,7 +28,7 @@
           <ULink
             target="_blank"
             type="button"
-            class="mt-5 w-full md:w-3/5"
+            class="mt-5 w-full md:w-2/5"
             active-class="text-white "
             inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] "
             >{{ $t("downloadTextBtn") }}</ULink
