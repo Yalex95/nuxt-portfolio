@@ -18,7 +18,8 @@
         class="btn-container mt-5 relative flex-row flex justify-center gap-2"
       >
         <ULink
-        to="/#contact"
+        to="#contact"
+        :exact-hash="true"
           type="button"
           active-class="text-white "
           inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] "
