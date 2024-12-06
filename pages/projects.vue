@@ -24,7 +24,33 @@ const query = gql`
     }
   }
 `;
+const recentProject = gql`
+  {
+    viewer {
+      repositories(first: 1, orderBy: { field: CREATED_AT, direction: DESC }) {
+        nodes {
+          id
+          name
+          createdAt
+          description
+          url
+          forks {
+            totalCount
+          }
+          watchers {
+            totalCount
+          }
+          stargazers {
+            totalCount
+          }
+        }
+      }
+    }
+  }
+`;
 const { data } = await useAsyncQuery(query);
+const { data: recent } = await useAsyncQuery(recentProject);
+console.log(data);
 </script>
 <template>
   <NuxtLayout itemActiveName="projects">
@@ -34,6 +60,9 @@ const { data } = await useAsyncQuery(query);
     >
       <h1 class="text-5xl font-bold mt-20">Projects</h1>
       <p class="text-base p-2">Here are some of my projects</p>
+      <section>
+        {{ recent.data.viewer.repositories.nodes[0] }}
+      </section>
       <section class="grid grid-cols-3 gap-10">
         <div
           v-for="project in data.viewer.repositories.nodes"
