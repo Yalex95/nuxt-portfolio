@@ -20,7 +20,7 @@
         to="mailto:yerisaguilar95@gmailcom"
         :exact-hash="true"
           type="button"
-          inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] flex-row flex  items-center gap-2 w-2/12 justify-center"
+          inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] flex-row flex  items-center gap-2 w-2/12 justify-center mt-10"
         >
         <UIcon name="i-heroicons-envelope" class="w-5 h-5" />
           {{ $t("contactText") }}
