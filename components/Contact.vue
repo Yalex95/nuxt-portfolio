@@ -1,56 +1,5 @@
 <script setup lang="ts">
-import { z } from "zod";
-import emailjs from "@emailjs/browser";
-import type { FormSubmitEvent } from "#ui/types";
-const {  apiKey, templateId, serviceId  } = useRuntimeConfig();
-const schema = z.object({
-  email: z.string().email("Invalid email"),
-  fullName: z.string().optional(),
-  message: z.string().min(10, "message must be at least 10 characters"),
-  // .min(3, "full name must be at least 3 characters"),
-});
-console.log(apiKey,templateId,serviceId);
 
-type Schema = z.output<typeof schema>;
-
-const state = reactive({
-  email: undefined,
-  fullName: undefined,
-  message: undefined,
-});
-
-const status = ref();
-const statusMessage = ref("");
-async function onSubmit(event: FormSubmitEvent<Schema>) {
-  
-  try {
-    status.value = null;
-
-    const response = await emailjs.send(
-      serviceId, // Reemplaza con tu Service ID
-      templateId, // Reemplaza con tu Template ID
-      {
-        name: event.data.fullName,
-        email: event.data.email,
-        message: event.data.message,
-      },
-      apiKey // Reemplaza con tu clave pública
-    );
-
-    if (response.status === 200) {
-      status.value = "success";
-      statusMessage.value = "¡Correo enviado con éxito!";
-      event.data = { fullName: "", email: "", message: "" }; // Limpiar el formulario
-    } else {
-      throw new Error("Error al enviar el correo");
-    }
-  } catch (error) {
-    status.value = "error";
-    statusMessage.value =
-      "Hubo un problema al enviar el correo. Intenta nuevamente.";
-    console.error(error);
-  }
-}
 </script>
 
 <template>
@@ -66,48 +15,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           <h2 class="text-3xl font-bold uppercase">{{ $t("contactText") }}</h2>
           <h3 class="font-bold text-2xl uppercase">{{ $t("contactMeSub") }}</h3>
           <p class="my-5">{{ $t("contactMeDesc") }}</p>
-        </div>
-        <UForm
-          :schema="schema"
-          :state="state"
-          class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"
-          @submit.prevent="onSubmit"
+          
+        <ULink
+        to="mailto:yerisaguilar95@gmailcom"
+        :exact-hash="true"
+          type="button"
+          inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] flex-row flex  items-center gap-2 w-2/12 justify-center mt-10"
         >
-          <UFormGroup name="fullName">
-            <UInput
-              size="lg"
-              v-model="state.fullName"
-              icon="i-heroicons-user"
-              placeholder="Name"
-            />
-          </UFormGroup>
-          <UFormGroup name="email" required>
-            <UInput
-              size="lg"
-              v-model="state.email"
-              placeholder="you@example.com"
-              icon="i-heroicons-envelope"
-            />
-          </UFormGroup>
-          <UFormGroup name="message" class="md:col-span-2">
-            <UTextarea
-              size="lg"
-              v-model="state.message"
-              placeholder="Message"
-              icon="i-heroicons-chat-bubble-left-right"
-              required
-              autoresize
-              :maxrows="10"
-            />
-          </UFormGroup>
-
-          <UButton
-            type="submit"
-            class="md:w-1/3 px-4 py-3 flex items-center justify-center"
-          >
-            Submit
-          </UButton>
-        </UForm>
+        <UIcon name="i-heroicons-envelope" class="w-5 h-5" />
+          {{ $t("contactText") }}
+        </ULink>
+        </div>
       </div>
     </div>
   </section>

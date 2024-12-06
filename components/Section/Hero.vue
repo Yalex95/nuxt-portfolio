@@ -18,12 +18,13 @@
         class="btn-container mt-5 relative flex-row flex justify-center gap-2"
       >
         <ULink
-        to="#contact"
-        :exact-hash="true"
+          to="mailto:yerisaguilar95@gmailcom"
+          :exact-hash="true"
           type="button"
           active-class="text-white "
-          inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] "
+          inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] flex-row flex  items-center gap-2 justify-center"
         >
+          <UIcon name="i-heroicons-envelope" class="w-5 h-5" />
           {{ $t("contactText") }}
         </ULink>
 
@@ -36,7 +37,7 @@
 // TODO: add animation to hero
 </script>
 <style>
-.hero-container{
+.hero-container {
   position: relative;
   z-index: 1;
 }
@@ -74,14 +75,14 @@
   }
 }
 @media screen and (max-width: 640px) {
-  #hero{
+  #hero {
     background: linear-gradient(0deg, transparent, #0a1626);
   }
   #hero::after,
   #hero::before {
     opacity: 0.5;
   }
-  #hero::before{
+  #hero::before {
   }
 }
 </style>

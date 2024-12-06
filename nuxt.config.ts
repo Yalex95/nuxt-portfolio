@@ -32,10 +32,6 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
-
-    apiKey: process.env.API_KEY,
-    templateId: process.env.TEMPLATE_ID,
-    serviceId: process.env.SERVICE_ID,
   },
   apollo: {
     clients: {
