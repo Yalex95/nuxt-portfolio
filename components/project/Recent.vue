@@ -23,21 +23,11 @@
         </ULink>
       </div>
       <div class="flex flex-col w-full">
-        <h2 class="uppercase text-xl">Recent project</h2>
+        <h2 class="uppercase text-xl">{{ $t("recentProject") }}</h2>
         <h1 class="uppercase text-3xl font-bold">Portfolio</h1>
         <p class="my-5">
-          A modern Nuxt 3 application. Built with NuxtUI, Nuxt Content,
-          Graphql, nuxt i18n, this project demostrates responsiveness, graphql
-          integration, translation features, dynamic routing
+          {{ $t("portfolioDesc") }}
         </p>
-        <ULink
-          :exact-hash="true"
-          type="button"
-          active-class="text-white "
-          inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] flex-row flex  items-center gap-2 justify-center w-fit"
-        >
-          {{ $t("learnMore") }}
-        </ULink>
       </div>
     </div>
   </div>

@@ -12,7 +12,7 @@
       <!-- <p class="line-clamp-3 my-5">{{ description }}</p> -->
     </div>
     <div class="description">
-      <p class="line-clamp-2 my-5">{{ description }}</p>
+      <p class="line-clamp-2 my-5">{{ $t(description) }}</p>
       <div class="flex gap-5 ">
         <ULink
           :to="link"

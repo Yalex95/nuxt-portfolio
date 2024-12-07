@@ -14,5 +14,5 @@
 </template>
 <script setup>
 const props = defineProps(["projects"]);
-console.log(props.projects);
+
 </script>
