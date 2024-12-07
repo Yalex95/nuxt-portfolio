@@ -9,10 +9,18 @@ const { data: posts } = await useAsyncData("posts", () =>
     id="blog"
     class="flex flex-col w-full md:w-8/12 mx-auto text-white justify-center items-center"
   >
-    <h1 class="text-3xl my-8">Blog Post</h1>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias officia
-    eius explicabo consequuntur maiores ratione amet quasi consequatur sapiente
-    iure illum fugit non soluta doloribus error placeat iusto, quaerat libero.
+    <h1 class="text-3xl my-8">¡Bienvenidos a mi blog!</h1>
+
+    En esta sección, compartiré contenido relacionado con el apasionante mundo
+    del desarrollo web. Soy Ingeniero en Sistemas Computacionales y actualmente
+    me desempeño como desarrollador front-end, especializado en tecnologías como
+    Nuxt.js, JavaScript, CSS, HTML, entre otras. A través de este espacio,
+    quiero explorar temas como el desarrollo de interfaces modernas, las mejores
+    prácticas en programación, y herramientas útiles para potenciar tus
+    proyectos web. Mi objetivo es aportar valor y conocimientos, ya sea que
+    estés iniciando en el desarrollo o buscando perfeccionar tus habilidades.
+    ¡Espero que encuentres aquí ideas, soluciones y motivación para tus propios
+    proyectos! 🚀
 
     <section class="grid mt-8 gap-10 md:grid-cols-3">
       <Post :post="posts" />

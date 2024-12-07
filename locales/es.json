@@ -38,5 +38,9 @@
   "readMore": "Leer más",
   "viewWebsite": "Ver sitio web",
   "viewCode": "Ver codigo",
-  "learnMore": "Aprender mas"
+  "learnMore": "Aprender mas",
+  "portfolioDesc": "Un proyecto de desarrollo de sitios web moderno con Nuxt 3. Con NuxtUI, Nuxt Content, Graphql, i18n y Nuxt i18n demostrar precision, integracion de API Restful, traduccion, dinamico de rutas y mas.",
+  "portfolio": "Portafolio",
+  "budgetDesc": "Este proyecto fue hecho con React js framework.",
+  "animeDesc": "Este proyecto fue hecho con React js framework."
 }

@@ -37,5 +37,10 @@
   "readMore": "Read More",
   "viewWebsite": "View Website",
   "viewCode": "View Code",
-  "learnMore": "Learn More"
+  "learnMore": "Learn More",
+  "portfolioDesc": "A modern Nuxt 3 application. Built with NuxtUI, Nuxt Content,Graphql, nuxt i18n, this project demostrates responsiveness, graphql integration, translation features, dynamic routing and more.",
+  "portfolio": "Portfolio",
+  "budgetDesc": "This project was made with React js framework.",
+  "animeDesc": "This project was made with React js framework."
+  
 }
