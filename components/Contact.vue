@@ -6,10 +6,10 @@
   <section id="contact">
     <div
       id="contact-me"
-      class="flex md:w-11/12 lg:w-8/12 w-full flex-row mx-auto py-10 lg:py-20 justify-center lg:justify-start"
+      class="flex md:w-11/12 lg:w-8/12 w-full flex-row mx-auto lg:py-20 justify-center lg:justify-start"
     >
       <div
-        class="md:w-10/12 w-11/12 flex justify-center items-center py-10 flex-col"
+        class="md:w-10/12 w-11/12 flex justify-center items-center lg:py-10 flex-col"
       >
         <div class="flex flex-col py-10">
           <h2 class="text-3xl font-bold uppercase">{{ $t("contactText") }}</h2>
@@ -20,7 +20,7 @@
         to="mailto:yerisaguilar95@gmailcom"
         :exact-hash="true"
           type="button"
-          inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] flex-row flex  items-center gap-2 w-2/12 justify-center mt-10"
+          inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] flex-row flex  items-center gap-2 lg:w-2/12 justify-center  mt-5lg:mt-10"
         >
         <UIcon name="i-heroicons-envelope" class="w-5 h-5" />
           {{ $t("contactText") }}

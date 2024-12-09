@@ -1,15 +1,15 @@
 <template>
   <section
-    class="flex flex-col justify-center items-center relative py-12 px-10 md:px-0"
+    class="flex flex-col justify-center items-center relative w-11/12 lg:full my-10 mx-auto md:px-0"
     id="about"
   >
     <div
-      class="lg:py-20 lg:px-10 grid grid-cols-1 md:grid-cols-2 mgap-10 lg:gap-0 py-10 px-10 md:px-0 lg:p-0 md:w-8/12"
+      class="lg:py-20 lg:px-10 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-0 py-10 px-5  lg:p-0 lg:w-8/12 m-auto"
       id="about-me"
     >
       <!-- image -->
       <div class="flex-row flex justify-center relative md:order-1 order-2">
-        <div class="relative pt-10 md:pt-6 md:pl-8">
+        <div class="relative pt-0 lg:pt-6 lg:pl-8">
           <img
             src="/images/home/img.png"
             class="rounded-lg relative z-0"
@@ -22,13 +22,13 @@
         <h2 class="uppercase md:text-xl lg:text-3xl font-bold">
           Yeris Alejandra Aguilar
         </h2>
-        <p class="my-3 text-sm lg:text-lg">{{ $t("aboutMeText") }}</p>
+        <p class="my-3  lg:text-sm lg:text-lg line-clamp-5 md:line-clamp-5 lg:line-clamp-none">{{ $t("aboutMeText") }}</p>
 
         <div class="relative">
           <ULink
             target="_blank"
             type="button"
-            class="mt-5 w-full md:w-2/5"
+            class="mt-5 w-fit lg:w-2/5"
             active-class="text-white "
             inactive-class="text-[#0f172a] bg-[#00dc82] rounded-md border-2 border-transparent py-2 px-4  hover:text-white hover:bg-transparent border-2 hover:border-[#00dc82] "
             >{{ $t("downloadTextBtn") }}</ULink

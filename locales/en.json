@@ -41,6 +41,9 @@
   "portfolioDesc": "A modern Nuxt 3 application. Built with NuxtUI, Nuxt Content,Graphql, nuxt i18n, this project demostrates responsiveness, graphql integration, translation features, dynamic routing and more.",
   "portfolio": "Portfolio",
   "budgetDesc": "This project was made with React js framework.",
-  "animeDesc": "This project was made with React js framework."
+  "animeDesc": "This project was made with React js framework.",
+  "blogDesc":"In this section, I will share content related to the exciting world of web development. I am a Computer Systems Engineer and currently work as a front-end developer specializing in technologies like Nuxt.js, JavaScript, CSS, HTML, and more. Through this space, I aim to explore topics such as modern interface development, best programming practices, and useful tools to enhance your web projects. My goal is to provide value and knowledge, whether you're just starting in development or looking to refine your skills. I hope you find ideas, solutions, and inspiration for your own projects here!",
+  "welcomeToMyBlog": "Welcome to My Blog!",
+  "projectsDesc": "Here are some of my projects"
   
 }
