@@ -45,7 +45,7 @@ const techStack = [
       :slides="techStack"
       sliderClass="flex flex-col"
       imageClass="w-1/2 h-1/2"
-      titleClass="text-xl mt-4 capitalize font-semibold"
+      titleClass="text-sm md:text-xl mt-4 capitalize font-semibold"
       sliderWrapperClass="purple-grad "
     />
     <SectionAbout />

@@ -7,7 +7,7 @@
       imageClass="w-10 h-10"
       titleClass="text-center capitalize font-semibold mt-5"
       descriptionClass="text-sm mt-3 font-light line-clamp-4 md:line-clamp-3"
-      sliderWrapperClass="py-20 md:py-10 bg-[#203359] px-10 md:px-0"
+      sliderWrapperClass="lg:py-20 py-10 md:py-10 bg-[#203359] px-5 lg:px-10 md:px-0"
       :lang="true"
       :showReadMore="true"
     />

@@ -17,7 +17,7 @@ const links = [
   <hr class="mb-10 border-[#03340f]" />
   <footer>
     <section
-      class="mx-auto max-w-7xl px-2 sm:px-4 lg:py-6 text-gray flex flex-row justify-between items-center"
+      class="mx-auto max-w-7xl px-2 sm:px-4 lg:py-6 text-gray flex flex-col lg:flex-row justify-between items-center pt-10 pb-20"
     >
       <div class="flex flex-col">
         <p class="text-lg uppercase">Frontend web developer</p>
@@ -27,7 +27,7 @@ const links = [
           Baja California MX
         </p>
       </div>
-      <div class="flex flex-row justify-center gap-4 mb-4 mt-2">
+      <div class="flex flex-row lg:justify-center gap-4 mb-4 lg:mt-2 mt-10 w-full">
         <UHorizontalNavigation :links="links" class="" />
       </div>
     </section>
