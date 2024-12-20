@@ -8,7 +8,7 @@ useSeoMeta({
   ogTitle: 'Yeris Aguilar - Front End Web Developer',
   description: 'Soy Yeris, una apasionada desarrolladora web de front-end con habilidades para crear experiencias online cautivadoras',
   ogDescription: 'Soy Yeris, una apasionada desarrolladora web de front-end con habilidades para crear experiencias online cautivadoras',
-  ogImage: '/images/home/img.png',
+  ogImage: '/images/home/image.png',
   twitterCard: 'summary_large_image',
 })
 const techStack = [
