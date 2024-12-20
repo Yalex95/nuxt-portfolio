@@ -4,7 +4,7 @@
     id="about"
   >
     <div
-      class="lg:py-20 lg:px-10 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-0 py-10 px-5  lg:p-0 lg:w-8/12 m-auto"
+      class="lg:py-20 lg:px-10 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-10 py-10 px-5  lg:p-0 lg:w-8/12 m-auto"
       id="about-me"
     >
       <!-- image -->
@@ -12,7 +12,7 @@
         <div class="relative pt-0 lg:pt-6 lg:pl-8">
           <img
             src="/images/home/img.png"
-            class="rounded-lg relative z-0"
+            class="rounded-lg relative z-0 object-fit max-h-96"
             alt="portfolio image"
           />
         </div>
