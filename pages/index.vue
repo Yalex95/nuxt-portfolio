@@ -3,6 +3,14 @@ const { locale } = useI18n();
 const { data: posts } = await useAsyncData("latest-posts", () =>
   queryContent(`/${locale.value}/blog`).sort({ date: 1 }).limit(3).find()
 );
+useSeoMeta({
+  title: 'Yeris Aguilar - Front End Web Developer',
+  ogTitle: 'Yeris Aguilar - Front End Web Developer',
+  description: 'Soy Yeris, una apasionada desarrolladora web de front-end con habilidades para crear experiencias online cautivadoras',
+  ogDescription: 'Soy Yeris, una apasionada desarrolladora web de front-end con habilidades para crear experiencias online cautivadoras',
+  // ogImage: 'https://example.com/image.png',
+  // twitterCard: 'summary_large_image',
+})
 const techStack = [
   {
     title: "Nuxt 3",
